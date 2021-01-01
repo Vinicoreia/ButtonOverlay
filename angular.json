@@ -1,0 +1,47 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "button-overlay": {
+      "projectType": "library",
+      "root": "projects/button-overlay",
+      "sourceRoot": "projects/button-overlay/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/button-overlay/tsconfig.lib.json",
+            "project": "projects/button-overlay/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/button-overlay/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/button-overlay/src/test.ts",
+            "tsConfig": "projects/button-overlay/tsconfig.spec.json",
+            "karmaConfig": "projects/button-overlay/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/button-overlay/tsconfig.lib.json",
+              "projects/button-overlay/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "button-overlay"
+}
