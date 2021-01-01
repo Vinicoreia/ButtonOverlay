@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {PageEvent} from "@angular/material/paginator";
+import {PageEvent} from '@angular/material/paginator';
 
 @Component({
   selector: 'card-popover',
@@ -25,17 +25,17 @@ import {PageEvent} from "@angular/material/paginator";
 })
 export class CardPopoverComponent implements OnInit {
   public values: string[];
-  public currentValue = "";
+  public currentValue = '';
 
   constructor() { }
 
   ngOnInit(): void {
-    if (this.values.length > 0) {
+    if (this.values && this.values.length > 0) {
       this.currentValue = this.values[0];
     }
   }
 
-  public onPageChange($event: PageEvent) {
+  public onPageChange($event: PageEvent): void {
     const currentIndex = $event.pageIndex;
     this.currentValue = this.values[currentIndex];
   }

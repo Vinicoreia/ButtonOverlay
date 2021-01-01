@@ -6,8 +6,8 @@ import {
   OverlayConfig,
   OverlayRef,
   PositionStrategy
-} from "@angular/cdk/overlay";
-import {ComponentPortal} from "@angular/cdk/portal";
+} from '@angular/cdk/overlay';
+import {ComponentPortal} from '@angular/cdk/portal';
 
 export interface PopoverParams {
   readonly origin: HTMLElement;
@@ -20,7 +20,7 @@ export type PopoverPosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom
 export type Popover<T> = {
   overlayRef: OverlayRef;
   componentInstance: T;
-}
+};
 
 @Injectable({
   providedIn: 'root'
@@ -71,9 +71,9 @@ export class PopoverService {
         return PopoverService.getTopLeftPosition();
       case 'top-right':
         return PopoverService.getTopRightPosition();
-      case "bottom-left":
+      case 'bottom-left':
         return PopoverService.getBottomLeftPosition();
-      case "bottom-right":
+      case 'bottom-right':
         return PopoverService.getBottomRightPosition();
       default:
         return PopoverService.getTopRightPosition();
@@ -84,14 +84,14 @@ export class PopoverService {
     const overlayConfig = this.getOverlayConfig(popoverParams);
     const overlayRef = this.createOverlayRef(overlayConfig);
     const overlayInstance = overlayRef.attach(new ComponentPortal(component));
-    return {componentInstance: overlayInstance.instance, overlayRef: overlayRef};
+    return {componentInstance: overlayInstance.instance, overlayRef};
   }
 
   private createOverlayRef(overlayConfig: OverlayConfig): OverlayRef {
     return this.overlay.create(overlayConfig);
   }
 
-  private getOverlayConfig(popoverParams: PopoverParams) {
+  private getOverlayConfig(popoverParams: PopoverParams): OverlayConfig {
     const defaultConfig = new OverlayConfig({
       hasBackdrop: true,
       positionStrategy: this.getOverlayPositionStrategy(popoverParams.origin, popoverParams.position),

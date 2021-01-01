@@ -1,7 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {Component} from '@angular/core';
 import {PopoverService} from './popover.service';
-import {ConnectionPositionPair, Overlay} from "@angular/cdk/overlay";
+import {ConnectionPositionPair, Overlay} from '@angular/cdk/overlay';
 
 @Component({
   selector: 'mock-component',
@@ -66,7 +66,7 @@ describe('PopoverService', () => {
     // Arrange
     const root = document.createElement('div');
     // Act
-    const resultPopover = service.open({origin: root, content: []}, MockEmptyComponent)
+    const resultPopover = service.open({origin: root, content: []}, MockEmptyComponent);
     // Assert
     expect(resultPopover.componentInstance).toEqual('all good');
   });
@@ -75,7 +75,7 @@ describe('PopoverService', () => {
     // Arrange
     const root = document.createElement('div');
     // Act
-    const resultPopover = service.open({origin: root, content: [], position: 'top-left'}, MockEmptyComponent)
+    const resultPopover = service.open({origin: root, content: [], position: 'top-left'}, MockEmptyComponent);
     // Assert
     expect(resultPopover.componentInstance).toEqual('all good');
   });
@@ -84,7 +84,7 @@ describe('PopoverService', () => {
     // Arrange
     const root = document.createElement('div');
     // Act
-    const resultPopover = service.open({origin: root, content: [], position: 'top-right'}, MockEmptyComponent)
+    const resultPopover = service.open({origin: root, content: [], position: 'top-right'}, MockEmptyComponent);
     // Assert
     expect(resultPopover.componentInstance).toEqual('all good');
   });
@@ -93,7 +93,7 @@ describe('PopoverService', () => {
     // Arrange
     const root = document.createElement('div');
     // Act
-    const resultPopover = service.open({origin: root, content: [], position: 'bottom-left'}, MockEmptyComponent)
+    const resultPopover = service.open({origin: root, content: [], position: 'bottom-left'}, MockEmptyComponent);
     // Assert
     expect(resultPopover.componentInstance).toEqual('all good');
   });
@@ -102,7 +102,7 @@ describe('PopoverService', () => {
     // Arrange
     const root = document.createElement('div');
     // Act
-    const resultPopover = service.open({origin: root, content: [], position: 'bottom-right'}, MockEmptyComponent)
+    const resultPopover = service.open({origin: root, content: [], position: 'bottom-right'}, MockEmptyComponent);
     // Assert
     expect(resultPopover.componentInstance).toEqual('all good');
   });

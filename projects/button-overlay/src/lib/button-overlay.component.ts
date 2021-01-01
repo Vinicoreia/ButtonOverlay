@@ -1,8 +1,8 @@
 import {Component, Input} from '@angular/core';
-import {Popover, PopoverParams, PopoverPosition, PopoverService} from "./popover/popover.service";
-import {CardPopoverComponent} from "./card-popover/card-popover.component";
-import {ThemePalette} from "@angular/material/core";
-import {OverlayConfig} from "@angular/cdk/overlay";
+import {Popover, PopoverParams, PopoverPosition, PopoverService} from './popover/popover.service';
+import {CardPopoverComponent} from './card-popover/card-popover.component';
+import {ThemePalette} from '@angular/material/core';
+import {OverlayConfig} from '@angular/cdk/overlay';
 
 @Component({
   selector: 'button-overlay',

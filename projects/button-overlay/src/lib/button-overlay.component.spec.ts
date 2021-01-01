@@ -1,10 +1,10 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {of} from 'rxjs';
 import {ButtonOverlayComponent} from './button-overlay.component';
-import {CardPopoverComponent} from "./card-popover/card-popover.component";
-import {ComponentType, Overlay} from "@angular/cdk/overlay";
-import {Popover, PopoverParams, PopoverService} from "./popover/popover.service";
-import {MatButtonModule} from "@angular/material/button";
+import {CardPopoverComponent} from './card-popover/card-popover.component';
+import {ComponentType, Overlay} from '@angular/cdk/overlay';
+import {Popover, PopoverParams, PopoverService} from './popover/popover.service';
+import {MatButtonModule} from '@angular/material/button';
 
 export class PopoverServiceMock {
   constructor() {}
@@ -54,7 +54,7 @@ describe('ButtonOverlayComponent', () => {
   it('should display button name', () => {
     // Arrange
     component.title = 'Test';
-    component.color = "primary";
+    component.color = 'primary';
     fixture.detectChanges();
     // Assert
     const button = fixture.debugElement.nativeElement.querySelector('button');

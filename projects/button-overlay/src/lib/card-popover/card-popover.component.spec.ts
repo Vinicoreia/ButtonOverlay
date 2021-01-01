@@ -1,8 +1,8 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CardPopoverComponent} from './card-popover.component';
-import {MatPaginatorModule} from "@angular/material/paginator";
-import {MatCardModule} from "@angular/material/card";
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatCardModule} from '@angular/material/card';
 
 describe('CardPopoverComponent', () => {
   let component: CardPopoverComponent;
@@ -30,7 +30,7 @@ describe('CardPopoverComponent', () => {
       // Assert
       expect(component).toBeTruthy();
     });
-  })
+  });
 
   describe('component values are not empty', () => {
     beforeEach(() => {
@@ -48,7 +48,7 @@ describe('CardPopoverComponent', () => {
 
     it('should display first value', () => {
       // Arrange
-      const displayedContent = fixture.debugElement.nativeElement.querySelector("mat-card-content > p");
+      const displayedContent = fixture.debugElement.nativeElement.querySelector('mat-card-content > p');
       // Assert
       expect(displayedContent.textContent).toEqual(values[0]);
     });
@@ -56,11 +56,11 @@ describe('CardPopoverComponent', () => {
     it('should display second value when clicking next once', () => {
       // Arrange
       const nextPageButton = fixture.debugElement.nativeElement.querySelector('button[aria-label="Next page"]');
-      const displayedContent = fixture.debugElement.nativeElement.querySelector("mat-card-content > p");
+      const displayedContent = fixture.debugElement.nativeElement.querySelector('mat-card-content > p');
       // Act
       nextPageButton.click();
       fixture.detectChanges();
-      //Assert
+      // Assert
       expect(displayedContent.textContent).toEqual(values[1]);
     });
   });
