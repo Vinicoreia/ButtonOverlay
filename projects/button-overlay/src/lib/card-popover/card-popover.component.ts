@@ -13,7 +13,7 @@ import {PageEvent} from '@angular/material/paginator';
       <mat-card-content>
         <p>{{currentValue}}</p>
       </mat-card-content>
-      <mat-card-actions>
+      <mat-card-actions *ngIf="values && values.length">
         <mat-paginator [length]="values.length"
                        [pageSize]="1"
                        (page)="onPageChange($event)">
@@ -24,7 +24,7 @@ import {PageEvent} from '@angular/material/paginator';
   styles: []
 })
 export class CardPopoverComponent implements OnInit {
-  public values: string[];
+  public values: string[] = [];
   public currentValue = '';
 
   constructor() { }
