@@ -4,7 +4,12 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build button-overlay` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+
+## Packing
+
+Go to the dist folder, access the button-overlay folder and run `npm pack` to pack the project into a .tgz file.
 
 ## Running unit tests
 
